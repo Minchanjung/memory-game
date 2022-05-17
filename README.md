@@ -12,3 +12,8 @@ once all cards have been successfully selected open win page
 create an opening start game page
 main page wiht game and score
 gameover screen with option to restart
+
+//functions
+update board after click
+randomize board
+reset game 
