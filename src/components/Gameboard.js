@@ -88,11 +88,13 @@ const Gameboard = (props) => {
             setCards(() => ({...cards, [id]: true,}));
             props.setScore(props.score + 1);
             if (props.score >= 11) {
+                returnObject();
                 props.endGame();
             }
         }
         if (cards[id] === true) {
             setCards(() => ({...cards, [id]: false}))
+            returnObject();
             props.endGame();
         } 
     }
@@ -116,6 +118,69 @@ const Gameboard = (props) => {
         }
         console.log(array)
         return array;
+    }
+
+    const returnObject = () => {
+        setAlbums([{
+            id: "MBDTF",
+            caption: "My Beautiful Dark Twisted Fantasy",
+            src: mbdtf
+        }, 
+        {
+            id: "GKMC",
+            caption: "Good Kid Maad City",
+            src: gkmc
+        },
+         {
+            id: "Ilmatic",
+            caption: "Ilmatic",
+            src: ilmatic
+         }, 
+         {
+            id: "Faces",
+            caption: "Faces",
+            src: faces
+         }, 
+         {
+            id: "TMB",
+            caption: "The Melodic Blue",
+            src: tmb
+         }, 
+         {
+            id: "TPAB",
+            caption: "To Pimp A Butterfly",
+            src: tpab
+         }, 
+         {
+            id: "Circles",
+            caption: "Circles",
+            src: circles
+         }, 
+         {
+            id: "Swimming",
+            caption: "Swimming",
+            src: swimming
+         }, 
+         {
+            id: "TMOTM",
+            caption: "The Man On The Moon",
+            src: tmotm
+         }, 
+         {
+            id: "Nectar",
+            caption: "Nectar",
+            src: nectar
+         }, 
+         {
+            id: "UP",
+            caption: "Under Pressure",
+            src: up
+         }, 
+         {
+            id: "inRainbows",
+            caption: "In Rainbows",
+            src: inrainbows
+         }])
     }
 
     return (
