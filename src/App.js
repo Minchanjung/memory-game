@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import StartPage from './components/Start';
 import Gameboard from './components/Gameboard';
 import EndPage from './components/End';
@@ -27,17 +27,19 @@ const App = () => {
   return (
     <div className="App">
       {(renderStart) ? <StartPage onClick={handleStart}/> : null }
-      <div className='header'>
-        <h1>Game</h1>
-        <div id="scoreContainer">
-          <div id="score">Score: </div>
-          <div id="bestScore">Best Score: </div>
-        </div>
-      </div>
-
-      <Gameboard score={score} setScore={setScore} endGame={endGame}/>
-
       {(renderEnd) ? <EndPage onClickEnd={handleStart} score={score}/> : null}
+      <div className='contentContainer'>
+        <div className='header'>
+          <h1 id="logo">Album Memory</h1>
+          <div id="scoreContainer">
+            <div className="scoreClass" id="score">Score: {score}</div>
+            <div className='scoreClass' id="bestScore">Best Score: {bestScore}</div>
+          </div>
+        </div>
+
+        <Gameboard score={score} setScore={setScore} endGame={endGame}/>
+      </div>
+      
     </div>
   );
 }

@@ -2,3 +2,31 @@
     margin: 0;
     padding: 0;
 }
+
+.App {
+    background-color: rgb(238, 238, 238);
+}
+
+.contentContainer {
+    padding: 2em;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+#logo {
+    margin-left: 1em;
+}
+
+#scoreContainer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.scoreClass {
+    margin-right: 1em;
+}

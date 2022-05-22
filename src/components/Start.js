@@ -5,10 +5,12 @@ const StartPage = (props) => {
     return (
         <div className='startContainer'>
             <div className='startContent'>
-                <h1>Welcome</h1>
+                <h1 id="startHeader">Welcome to <br/>Album Memory Game</h1>
                 <h2>How to Play</h2>
-                <p>;aljfsljfa fsa instructions</p>
-                <button onClick={props.onClick}>Play</button>
+                <p>The objective of this game is to click every album once.<br/>
+                The position of the albums will change every click.<br/>
+                Have fun and Good Luck?</p>
+                <button id='playBtn' onClick={props.onClick}>Play</button>
             </div>
             
         </div>

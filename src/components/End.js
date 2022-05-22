@@ -3,10 +3,10 @@ import '../styles/End.css';
 
 const EndPage = (props) => {
     return (
-        <div className='startContainer'>
-            <div className='startContent'>
-                <div>Your Score was {props.score}</div>
-                <button onClick={props.onClickEnd}>Play Again</button>
+        <div className='endContainer'>
+            <div className='endContent'>
+                <div id="scoreDisplay">Your Score was {props.score}</div>
+                <button id='playAgainBtn' onClick={props.onClickEnd}>Play Again</button>
             </div>
             
         </div>
